@@ -1,6 +1,6 @@
 defmodule SpacexEx.Client do
   @default_service_url "https://api.spacexdata.com/v2"
-  @ssl_option [ssl: [{:versions, [:"tlsv1.2"]}], recv_timeout: 500]
+  @ssl_option [ssl: [{:versions, [:"tlsv1.2"]}]]
 
   @doc """
   Send a GET request to the API
@@ -129,7 +129,7 @@ defmodule SpacexEx.Client do
       iex> Myclient.Api.content_type([{"Server", "GitHub.com"}, {"Content-Type", "application/xml; charset=utf-8"}])
       "application/xml"
   """
-  def content_type({ok, body, headers}), do: {ok, body, content_type(headers)}
+  def content_type({code, body, headers}), do: {code, body, content_type(headers)}
   def content_type([]), do: "application/json"
   def content_type([{"Content-Type", val} | _]), do: val |> String.split(";") |> List.first()
   def content_type([_ | t]), do: t |> content_type
@@ -181,27 +181,27 @@ defmodule SpacexEx.Client do
       {:error, :nxdomain}
 
   """
-  def decode({ok, body, _}) when is_atom(body), do: {ok, body}
-  def decode({ok, "", _}), do: {ok, ""}
+  def decode({code, body, _}) when is_atom(body), do: {code, body}
+  def decode({code, "", _}), do: {code, ""}
 
-  def decode({ok, body, "application/json"}) when is_binary(body) do
+  def decode({code, body, "application/json"}) when is_binary(body) do
     body
     |> Poison.decode(keys: :atoms)
     |> case do
-      {:ok, parsed} -> {ok, parsed}
+      {:ok, parsed} -> {code, parsed}
       _ -> {:error, body}
     end
   end
 
-  def decode({ok, body, "application/xml"}) do
+  def decode({code, body, "application/xml"}) do
     try do
-      {ok, body |> :binary.bin_to_list() |> :xmerl_scan.string()}
+      {code, body |> :binary.bin_to_list() |> :xmerl_scan.string()}
     catch
       :exit, _e -> {:error, body}
     end
   end
 
-  def decode({ok, body, _}), do: {ok, body}
+  def decode({code, body, _}), do: {code, body}
 
   @doc """
   Clean the URL, if there is a port, but nothing after, then ensure there's a
