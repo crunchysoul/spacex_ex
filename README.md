@@ -12,6 +12,13 @@
 
 </div>
 
+## Table of Contents
+
+- [Documentation](#documentation)
+- [Installation](#installation)
+- [Usage](#basic-usage)
+
+
 ## Documentation
 See the [Wiki](https://github.com/crunchysoul/spacex_ex/wiki) for full wrapper documentation.
 
