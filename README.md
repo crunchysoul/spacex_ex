@@ -1,6 +1,6 @@
 <div align="center">
 
-# SpaceX API Wrapper (Elixir)
+# Elixir SpaceX API Wrapper 
 [![GitHub release](https://img.shields.io/github/release/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex/releases)
 [![GitHub issues](https://img.shields.io/github/issues/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex/issues)
 [![GitHub stars](https://img.shields.io/github/stars/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex/stargazers)
