@@ -1,11 +1,14 @@
 defmodule SpacexEx.MixProject do
   use Mix.Project
 
+  @elixir_version "~> 1.7"
+  @version "1.0.0"
+
   def project do
     [
       app: :spacex_ex,
-      version: "0.1.0",
-      elixir: "~> 1.7",
+      version: @version,
+      elixir: @elixir_version,
       source_url: "https://github.com/crunchysoul/spacex_ex",
       homepage_url: "https://github.com/crunchysoul/spacex_ex",
       docs: [extras: ["README.md"]],
