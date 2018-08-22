@@ -93,7 +93,10 @@ end
 {200, part_core} = SpaceX.part_cores("B1029")
 
 # Get a SpaceX payloads information by id
-{200, payload} = SpaceX.payloads("B1029")
+{200, payload} = SpaceX.payloads("SpaceX CRS-11")
+
+# Get a SpaceX rockets information by id
+{200, rocket} = SpaceX.rockets("bfr")
 
 # Get attributes of a capsule
 capsule.name
