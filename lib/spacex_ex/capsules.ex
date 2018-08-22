@@ -2,12 +2,33 @@ defmodule SpacexEx.Capsules do
   alias SpacexEx.Client
   @endpoint "/capsules"
 
-  def endpoint do
-    Client.clean_url(@endpoint)
-    # |> IO.inspect()
+  @doc """
+  List of capsule information
+  """
+  def capsules do
+    capsules = Client.clean_url(@endpoint)
+    Client.get(capsules)
   end
 
-  def list do
-    Client.get(endpoint())
+  @doc """
+  Get a capsule information
+  """
+  def id_endpoint(id) do
+    endpoint =
+      @endpoint
+      |> Client.id_endpoint(id)
+  end
+
+  def get(id) do
+    id
+    |> id_endpoint()
+    |> Client.get()
+    |> case do
+      {200, resp} ->
+        resp
+
+      {_, error} ->
+        error
+    end
   end
 end

@@ -258,6 +258,19 @@ defmodule SpacexEx.Client do
     end
   end
 
+  def id_endpoint(url, id) do
+    id =
+      case id do
+        "/" <> _ ->
+          url <> id
+
+        _ ->
+          url <> "/" <> id
+      end
+
+    clean_url(id)
+  end
+
   @doc """
   Clean the URL, if there is a port, but nothing after, then ensure there's a
   ending '/' otherwise you will encounter something like
