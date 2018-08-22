@@ -9,6 +9,8 @@ defmodule SpacexEx.MixProject do
       app: :spacex_ex,
       version: @version,
       elixir: @elixir_version,
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
       source_url: "https://github.com/crunchysoul/spacex_ex",
       homepage_url: "https://github.com/crunchysoul/spacex_ex",
       docs: [extras: ["README.md"]],
