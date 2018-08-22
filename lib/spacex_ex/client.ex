@@ -1,4 +1,7 @@
 defmodule SpacexEx.Client do
+  @moduledoc """
+  API Client Module.
+  """
   @default_service_url "https://api.spacexdata.com/v2"
   @ssl_option [ssl: [{:versions, [:"tlsv1.2"]}]]
 

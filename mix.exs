@@ -27,7 +27,7 @@ defmodule SpacexEx.MixProject do
     [
       {:httpoison, "~> 1.0.0"},
       {:poison, "~> 3.1"},
-      {:ex_doc, "~> 0.18.3", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:inch_ex, github: "rrrene/inch_ex", only: [:dev, :test]}
     ]
   end

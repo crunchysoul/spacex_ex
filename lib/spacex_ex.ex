@@ -1,4 +1,7 @@
 defmodule SpacexEx do
+  @moduledoc """
+  SpaceEx provides all SpaceX API functions.
+  """
   alias SpacexEx.Client
 
   @endpoints %{
@@ -13,6 +16,17 @@ defmodule SpacexEx do
     rockets: "/rockets"
   }
 
+  @doc """
+  Get list of all capsule information
+
+  ## Examples
+
+      iex> SpacexEx.capsules
+      {200, [%{active: true, crew_capacity: 0, description: "Dragon is a reusable ...", ...}, %{active: true, crew_capacity: 0, ...}, ...]}
+
+      iex> SpacexEx.capsules
+      {:error, :econnrefused}
+  """
   def capsules(), do: get(@endpoints.capsules)
   def capsules(id), do: get(@endpoints.capsules, id)
   def info(), do: get(@endpoints.info)
