@@ -4,13 +4,13 @@
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+If [available in Hex](https://hex.pm/docs/spacex_ex), the package can be installed
 by adding `spacex_ex` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:spacex_ex, "~> 0.1.0"}
+    {:spacex_ex, "~> 1.0.0"}
   ]
 end
 ```
