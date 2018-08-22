@@ -5,6 +5,7 @@ defmodule SpacexEx do
   For usage information, see [the documentation](http://hexdocs.pm/spacex_ex), which
   includes guides, SpaceX API information and links to useful resources.
   """
+
   alias SpacexEx.Client
 
   @endpoints %{
@@ -33,7 +34,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: {number} | {:error, String.t()}
   def capsules(), do: get(@endpoints.capsules)
 
   @doc """
@@ -50,7 +51,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def capsules(id), do: get(@endpoints.capsules, id)
 
   @doc """
@@ -67,7 +68,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def info(), do: get(@endpoints.info)
 
   @doc """
@@ -84,7 +85,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def info(id), do: get(@endpoints.info, id)
 
   @doc """
@@ -101,7 +102,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def info_roadster(), do: get(@endpoints.info, "roadster")
 
   @doc """
@@ -118,7 +119,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def info_history(), do: get(@endpoints.info, "history")
 
   @doc """
@@ -135,7 +136,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def launches(), do: get(@endpoints.launches)
 
   @doc """
@@ -152,7 +153,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def launches(id), do: get(@endpoints.launches, id)
 
   @doc """
@@ -169,7 +170,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def launches_all(), do: get(@endpoints.launches, "all")
 
   @doc """
@@ -186,7 +187,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def launches_next(), do: get(@endpoints.launches, "next")
 
   @doc """
@@ -203,7 +204,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def launches_latest(), do: get(@endpoints.launches, "latest")
 
   @doc """
@@ -220,7 +221,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def launches_upcoming(), do: get(@endpoints.launches, "upcoming")
 
   @doc """
@@ -237,7 +238,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def launchpads(), do: get(@endpoints.launchpads)
 
   @doc """
@@ -254,7 +255,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def launchpads(id), do: get(@endpoints.launchpads, id)
 
   @doc """
@@ -271,7 +272,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def missions(), do: get(@endpoints.missions)
 
   @doc """
@@ -288,7 +289,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def missions(id), do: get(@endpoints.missions, id)
 
   @doc """
@@ -305,7 +306,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def part_capsules(), do: get(@endpoints.parts_caps)
 
   @doc """
@@ -322,7 +323,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def part_capsules(id), do: get(@endpoints.parts_caps, id)
 
   @doc """
@@ -339,7 +340,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def part_cores(), do: get(@endpoints.parts_cores)
 
   @doc """
@@ -356,7 +357,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def part_cores(id), do: get(@endpoints.parts_cores, id)
 
   @doc """
@@ -373,7 +374,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def payloads(), do: get(@endpoints.payloads)
 
   @doc """
@@ -390,7 +391,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def payloads(id), do: get(@endpoints.payloads, id)
 
   @doc """
@@ -407,7 +408,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def rockets(), do: get(@endpoints.rockets)
 
   @doc """
@@ -424,7 +425,7 @@ defmodule SpacexEx do
       iex> SpacexEx.capsules("dragon1")
       {:error, :econnrefused}
   """
-  @spec capsules() :: result_t | no_return
+  # @spec capsules() :: result_t | no_return
   def rockets(id), do: get(@endpoints.rockets, id)
 
   defp get(endpoint), do: Client.get(endpoint)
