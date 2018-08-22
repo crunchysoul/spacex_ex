@@ -262,16 +262,13 @@ defmodule SpacexEx.Client do
   end
 
   def id_endpoint(url, id) do
-    id =
-      case id do
-        "/" <> _ ->
-          url <> id
-
-        _ ->
-          url <> "/" <> id
-      end
-
-    clean_url(id)
+    id
+    |> case do
+      "/" <> _ -> url <> id
+      _ -> url <> "/" <> id
+    end
+    |> clean_url
+    |> URI.encode()
   end
 
   @doc """
