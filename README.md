@@ -91,8 +91,7 @@ end
 {200, launchpad} = SpacexEx.launchpads("ksc_lc_39a")
 
 # Get a SpaceX missions information by id
-# Cautious: return mission is in list format!
-{200, [mission]} = SpacexEx.missions("6C42550")
+{200, mission} = SpacexEx.missions("6C42550")
 
 # Get a SpaceX capsule part information by id
 {200, part_capsule} = SpacexEx.part_capsules("C111")
