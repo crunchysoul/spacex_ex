@@ -1,13 +1,13 @@
 <p align="center"><img src="https://www.spacex.com/sites/spacex/files/styles/new_gallery_large/public/2016_-_02_jason3_vertical2.jpg?itok=fxjAYWHW"></p>
 <div align="center">
 
-# 🚀 Elixir SpacexEx.API Wrapper 
+# 🚀 Elixir SpaceX API Wrapper 
 [![GitHub release](https://img.shields.io/github/release/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex/releases)
 [![GitHub issues](https://img.shields.io/github/issues/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex/issues)
 [![GitHub stars](https://img.shields.io/github/stars/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex/stargazers)
 [![GitHub license](https://img.shields.io/github/license/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex)
 
-### A simple API wrapper for [r-spacex/SpacexEx.API](https://github.com/r-spacex/SpaceX-API) in Elixir!
+### A simple API wrapper for [r-spacex/SpaceX-API](https://github.com/r-spacex/SpaceX-API) in Elixir!
 
 <br><br>
 
