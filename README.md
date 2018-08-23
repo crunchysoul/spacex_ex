@@ -7,7 +7,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex/stargazers)
 [![GitHub license](https://img.shields.io/github/license/crunchysoul/spacex_ex.svg)](https://github.com/crunchysoul/spacex_ex)
 
-### A simple API wrapper for [r-spacex/SpacexEx.API](https://github.com/r-spacex/SpacexEx.API) in Elixir!
+### A simple API wrapper for [r-spacex/SpacexEx.API](https://github.com/r-spacex/SpaceX-API) in Elixir!
 
 <br><br>
 
