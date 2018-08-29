@@ -20,7 +20,6 @@ defmodule SpacexEx do
     rockets: "/rockets"
   }
 
-  # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   @doc """
   Get list of all capsule information
 
