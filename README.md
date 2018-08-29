@@ -26,7 +26,7 @@ See the [Wiki](https://github.com/crunchysoul/spacex_ex/wiki) for full wrapper d
 Documentation for the API can be found [here](https://github.com/r-spacex/SpaceX API/wiki).
 
 ## Installation
-[available in Hex](https://hex.pm/docs/spacex_ex), the package can be installed
+[available in Hex](https://hex.pm/packages/spacex_ex/1.0.0), the package can be installed
 by adding `spacex_ex` to your list of dependencies in `mix.exs`:
 
 ```elixir
